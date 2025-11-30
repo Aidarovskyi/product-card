@@ -72,7 +72,12 @@ margin-top: 25px;
   width: 1280px;
   height: 1715px;
   margin: 0 auto; 
-  background-image: url("/images/bg-dangelions.png"); width: 790px; height: 697px; position:absolute; left: 85px; top: -0px;
+  background-image: url("/images/bg-dangelions.png"); 
+  width: 790px; 
+  height: 697px; 
+  position:absolute; 
+  left: 85px; 
+  top: -0px;
 }
 
 .products-list {
