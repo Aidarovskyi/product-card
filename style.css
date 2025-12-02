@@ -59,3 +59,62 @@ margin-top: 25px;
   font-size: 20px;
   float: right;
 }
+
+.page-title {
+  font-size: 70px;
+  width: 846px;
+  height: 78px;
+  margin: 220px 217px 119px 217px;
+  display: block;
+}
+  
+.card-container_container {
+  width: 1280px;
+  height: 1715px;
+  margin: 0 auto; 
+  background-image: url("/images/bg-dangelions.png"); 
+  width: 790px; 
+  height: 697px; 
+  position:absolute; 
+  left: 85px; 
+  top: -0px;
+}
+
+.products-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 1110px;
+  height: 1191px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  justify-content: center;
+}
+
+#change-color-button {
+  display: flex;
+  justify-content: center;
+}
+
+.container-button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+}
+
+button {
+width: 260px;
+height: 30px;
+border: rgb(0, 0, 0) solid 2px;
+border-radius: 1ch;
+background-color: #f7f7fa;
+color: black;
+}
+
+.color-yellow {
+  background-color: yellow;
+} 
