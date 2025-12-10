@@ -2,13 +2,13 @@
 // Создать функцию, которая принимает 2 параметра: город и температуру и выводит сообщение в консоль 
 // "Сейчас в X температура  — Y градусов по Цельсию"
 
-function weather(country, temperature) {
+function seeWeather(city, temperature) {
   
-  console.log("Сейчас в X температура  — Y градусов по Цельсию")
+  console.log(`'Сейчас в ${city}  температура ${temperature} градусов по Цельсию'`)
   
 }
 
-weather()
+seeWeather('Vladikavkaz', '+ 4')
 
 
 // Задание 4. 
@@ -19,7 +19,7 @@ weather()
 
 const speedLight = 299792458
 
-function checkSpeed(speed) {
+function findSpeed(speed) {
   if (speed > speedLight) {
     console.log("Сверхсветовая скорость");
   } else if (speed < speedLight) {
@@ -29,9 +29,9 @@ function checkSpeed(speed) {
   }
 }
 
-checkSpeed(299792458)
-checkSpeed(500000000)
-checkSpeed(200000000)
+findSpeed(299792458)
+findSpeed(500000000)
+findSpeed(200000000)
 
 
 // Задание 5
@@ -63,11 +63,10 @@ buyProduct(50)
 
 // Создать 1 функцию и именовать её по своему усмотрению
 
-function myData(name, age) {
+function getUserInfo(name, age) {
   console.log(name, age)
 }
-
-myData('Заур', '37 лет')
+getUserInfo('Заур', '37 лет')
 
 
 // Задание 7
