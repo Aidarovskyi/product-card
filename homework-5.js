@@ -8,7 +8,7 @@ function seeWeather(city, temperature) {
   
 }
 
-seeWeather('Vladikavkaz', '+ 4')
+seeWeather('Vladikavkaz', '+ 5')
 
 
 // Задание 4. 
@@ -19,7 +19,7 @@ seeWeather('Vladikavkaz', '+ 4')
 
 const speedLight = 299792458
 
-function findSpeed(speed) {
+function compareSpeed(speed) {
   if (speed > speedLight) {
     console.log("Сверхсветовая скорость");
   } else if (speed < speedLight) {
@@ -29,9 +29,9 @@ function findSpeed(speed) {
   }
 }
 
-findSpeed(299792458)
-findSpeed(500000000)
-findSpeed(200000000)
+compareSpeed(299792458)
+compareSpeed(500000000)
+compareSpeed(200000000)
 
 
 // Задание 5
