@@ -18,7 +18,7 @@ const userData = {
 // Добавьте дополнительное свойство - владелец авто, значением которого будет ОБЪЕКТ, описанный в пункте №3. 
 // Желательно добавлять отдельной строкой (имеется ввиду не при создании объекта)
 
-const carInformation = {
+const carinformation = {
   brand: 'Mersedes',
   model: 's-klass',
   year_release: 2022,
@@ -26,17 +26,17 @@ const carInformation = {
   akp: 'AT'
 }
 
-carInformation.owner = userData
-console.log(carInformation)
+carinformation.owner = userData
+console.log(carinformation)
 
 // Задание 5
 // Написать функцию которая аргументом будет принимать объект, описанный в пункте №4. 
 // Она проверяет, есть ли в объекте свойство "максимальная скорость",
 // если нет - добавляет его и задает значение, если есть - прекращает выполнение (ничего не делает)
 
-function addMaxSpeed(carInformation) {
-  if (!carInformation.hasOwnProperty("максимальная скорость")) {
-    carInformation["максимальная скорость"] = 220; 
+function addMaxSpeed(carinformation) {
+  if (!carinformation.hasOwnProperty("maxspeed")) {
+    carinformation.maxspeed = 220; 
   }
 }
 
@@ -47,17 +47,17 @@ addMaxSpeed()
 // которое нужно вывести и выводит его значение.
 
 const myData = {
-  name: 'Заур',
+  myname: 'Заур',
   age: 37
 }
 
-function showProperty(myData, name) {
-  if (myData.hasOwnProperty(name)) {
-    console.log(myData[name])
+function showProperty(myData, myname) {
+  if (myData.hasOwnProperty(myname)) {
+    console.log(myData[myname])
   }
 }
 
-showProperty(myData, 'name')
+showProperty(myData, 'myname')
 
 // Задание 7 
 // Создать массив, который содержит названия продуктов (просто строки)
