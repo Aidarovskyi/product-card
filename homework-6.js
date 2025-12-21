@@ -47,17 +47,17 @@ addMaxSpeed()
 // которое нужно вывести и выводит его значение.
 
 const myData = {
-  myname: 'Заур',
+  name: 'Заур',
   age: 37
 }
 
-function showProperty(myData, myname) {
-  if (myData.hasOwnProperty(myname)) {
-    console.log(myData[myname])
+function showObjectValue(myData, name) {
+  if (myData.hasOwnProperty(name)) {
+    console.log(myData[name])
   }
 }
 
-showProperty(myData, 'myname')
+showObjectValue(myData, 'name')
 
 // Задание 7 
 // Создать массив, который содержит названия продуктов (просто строки)
