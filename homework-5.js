@@ -2,13 +2,13 @@
 // Создать функцию, которая принимает 2 параметра: город и температуру и выводит сообщение в консоль 
 // "Сейчас в X температура  — Y градусов по Цельсию"
 
-function findWeather(city, temperature) {
+function showWeather(city, temperature) {
   
   console.log(`'Сейчас в ${city}  температура ${temperature} градусов по Цельсию'`)
   
 }
 
-findWeather('Vladikavkaz', '+ 5')
+showWeather('Vladikavkaz', '+ 5')
 
 
 // Задание 4. 
