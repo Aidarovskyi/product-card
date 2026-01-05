@@ -21,20 +21,20 @@ console.log(newMonths)
 
 // Задание 4
 
-const arrayReverse = (arrayNambers) => {
+const reverseArrayNumbers = (arrayNambers) => {
   return arrayNambers.reverse()
 }
 
-const arrayResult = arrayReverse(arrayNambers)
+const arrayResult = reverseArrayNumbers(arrayNambers)
 
 console.log(arrayResult)
 
 
-const arrayReverse2 = (arrayMonths) => {
+const reverseArrayMonths  = (arrayMonths) => {
   return arrayMonths.reverse()
 }
 
-const arrayResult2 = arrayReverse2(arrayMonths)
+const arrayResult2 = reverseArrayMonths(arrayMonths)
 
 console.log(arrayResult2)
 
@@ -51,55 +51,56 @@ console.log(commentsEmailCom)
 
 // Задание 8
 
-const getNewArray = commentsNetwork.map(comment => ({
+const modifiedUserData = commentsNetwork.map(comment => ({
   ...comment,
   postId: comment.id <= 5 ? 2 : 1
 }));
-console.log(getNewArray)
+console.log(modifiedUserData)
 
 
 // Задание 9
 
-const arrayIdName = commentsNetwork.map(comment =>
-  ({id : comment.id, name: comment.name})
-)
+const arrayIdName = commentsNetwork.map(comment => ({
+    id : comment.id, 
+    name: comment.name
+}))
 
 console.log(arrayIdName)
 
 
 // Задание 10
 
-const addPropertyArray = commentsNetwork.map(comment =>
-  ({...comment, isInvalid: 'ttt', isInvalid: comment.body.length > 180})
-)
+const addPropertyArray = commentsNetwork.map(comment => ({
+  ...comment,
+  isInvalid: 'ttt', 
+  isInvalid: comment.body.length > 180
+}))
 
 console.log(addPropertyArray)
 
 
 // Задание 11
 
-const emailWithMapArray = commentsNetwork.map(comment => comment.email)
+const getListEmailsMap = commentsNetwork.map(comment => comment.email)
 
-console.log(emailWithMapArray)
+console.log(getListEmailsMap)
 
 
 
-const emailWithReduceArray = commentsNetwork.reduce((accumulator, comment) => {
+const getListEmailsReduce = commentsNetwork.reduce((accumulator, comment) => {
   accumulator.push(comment.email);
   return accumulator;
 }, []);
 
-console.log(emailWithReduceArray) //Сделал с помощью нейронки
+console.log(getListEmailsReduce) //Сделал с помощью нейронки
 
 
 // Задание 12
 
-const stringArray = emailWithMapArray.toString()
+const getString = getListEmailsMap.toString()
 
-console.log(stringArray) 
+console.log(getString) 
 
-const joinArray = emailWithMapArray.join()
 
-console.log(joinArray) 
 
 
