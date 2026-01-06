@@ -72,7 +72,6 @@ console.log(arrayIdName)
 
 const addPropertyArray = commentsNetwork.map(comment => ({
   ...comment,
-  isInvalid: 'ttt', 
   isInvalid: comment.body.length > 180
 }))
 
@@ -81,25 +80,25 @@ console.log(addPropertyArray)
 
 // Задание 11
 
-const getListEmailsMap = commentsNetwork.map(comment => comment.email)
+const emailsList = commentsNetwork.map(comment => comment.email)
 
-console.log(getListEmailsMap)
+console.log(emailsList)
 
 
 
-const getListEmailsReduce = commentsNetwork.reduce((accumulator, comment) => {
+const commentEmails = commentsNetwork.reduce((accumulator, comment) => {
   accumulator.push(comment.email);
   return accumulator;
 }, []);
 
-console.log(getListEmailsReduce) //Сделал с помощью нейронки
+console.log(commentEmails) //Сделал с помощью нейронки
 
 
 // Задание 12
 
-const getString = getListEmailsMap.toString()
+const stringOfEmails = emailsList.toString()
 
-console.log(getString) 
+console.log(stringOfEmails)
 
 
 
