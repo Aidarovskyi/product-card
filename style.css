@@ -12,3 +12,8 @@
   background-color: darkolivegreen;
   color: white;
 }
+
+.product-price {
+  font-size: 20px;
+  float: right;
+}

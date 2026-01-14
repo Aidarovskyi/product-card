@@ -4,16 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <ul id="product-cards-list"></ul>
   <template id="product-template">
     <li class="product-container">
-      <p class="product-category"></p>
+      <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
       <p class="product-name"></p>
       <p class="product-description"></p>
       <p class="product-compound"></p>
+      <div class="product-price-container">
+            <span class="product-price-label">Цена</span>
+            <span class="product-price">1650 &#8381</span>
+      </div>
       <p class="product-currency"></p>
     </li>
   </template>

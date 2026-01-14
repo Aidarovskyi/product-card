@@ -1,6 +1,5 @@
-  export const productCards = [
+  export const productsCard = [
     {
-     category: 'Для нормальной кожи',
      name: 'Увлажняющий мусс',
      description: 'Глубоко увлажняет кожу лица, оставляя её мягкой и гладкой',
      compound: [
@@ -11,7 +10,6 @@
      currency: '₽'
     },
     {
-     category: 'Для нормальной кожи',
      name: 'Увлажняющая маска',
      description: 'Способствует удерживанию влаги в верхних слоях кожи',
      compound: [
@@ -22,7 +20,6 @@
      currency: '₽'
     },
     {
-     category: 'Для нормальной кожи',
      name: 'Гель для умывания',
      description: 'Интенсивно очищает, не повреждает защитный барьер кожи',
      compound: [
@@ -33,7 +30,6 @@
      currency: '₽'
     },
     {
-     category: 'Для нормальной кожи',
      name: 'Подарочный набор №1',
      description: 'Набор, состоящий из увлажняющего крема и маски',
      compound: [
@@ -44,7 +40,6 @@
      currency: '₽'
     },
     {
-     category: 'Для нормальной кожи',
      name: 'Подарочный набор №5',
      description: 'Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания',
      compound: [
