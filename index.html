@@ -3,27 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Product card</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <ul id="product-cards-list"></ul>
-  <template id="product-template">
-    <li class="product-container">
-      <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-      <p class="product-name"></p>
-      <p class="product-description"></p>
-      <p class="product-compound"></p>
-      <div class="product-price-container">
-            <span class="product-price-label">Цена</span>
-            <span class="product-price">1650 &#8381</span>
+  <div class="card-container_container">
+    <h1 class="page-title">Выбери свой продукт</h1>
+    <ul>
+      <div  class="container-button">
+        <button id="change-color-first-card" >Сменить цвет первойк арточки</button>
+        <button id="change-color-all-card">Сменить цвет всех карточек</button>
+        <button id="open-google">Открыть страницу Google.com</button>
+        <button id="output-console-log">Вывезти сообщение в консоль лог</button>
+        <button id="change-color-button" class="color-green" class="color-yellow" >Сменить цвет кнопки при нажатии</button>
       </div>
-      <p class="product-currency"></p>
-    </li>
-  </template>
+    <ul id="products-list"></ul>  
+    <template id="product-info">
+      <li class="card-container">
+          <img  class="product-img" src="" alt="Увлажняющий мусс" width="290px" height="245px">
+          <span class="product-category"></span>
+          <h3 class="product-name"></h3>
+          <p class="product-description"></p>
+          <span>Состав:</span>
+          <ul class="product-compound">
+            <li class="product-compound-item"></li>
+            <li class="product-compound-item"></li>
+            <li class="product-compound-item"></li>
+          </ul>
+          <div class="product-price-container">
+            <span class="product-price-label">Цена</span>
+            <span class="product-price">&#8381</span>
+          </div>
+      </li>
+    </template>
+  </ul>
+ </div>
+  <script src="/main.js"></script>
+  <script src="/homework-5.js"></script>
+  <script src="/homework-6.js"></script>
+  <script type="module" src="/homework-7.js"></script>
   <script type="module" src="./homework-8.js"></script>
 </body>
 </html>

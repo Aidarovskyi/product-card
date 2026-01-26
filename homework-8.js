@@ -1,70 +1,78 @@
-import { productsCard } from "./product-cards-array.js";
+import { productCards } from "./product-cards-array.js";
 
+// Задание 3
+
+const productTemplate = document.querySelector('#product-info')
+const productList = document.querySelector('#products-list')
+
+// productCards.forEach(product => {
+//   const productCardsClone = productTemplate.content.cloneNode(true)
+//   productCardsClone.querySelector('product-img').src = `Имя: ${product.img}`;
+//   productCardsClone.querySelector('product-category').textContent = `Имя: ${product.category}`;
+//   productCardsClone.querySelector('product-name').textContent = `Имя: ${product.name}`;
+//   productCardsClone.querySelector('product-description').textContent = `Описание: ${product.description}`
+//   productCardsClone.querySelector('product-compound').textContent = `Состав: ${product.compound}`
+//   productCardsClone.querySelector('product-price').textContent = `Цена: ${product.price}`
+//   productList.appendChild(productCardsClone)
+//   console.log(productList)
+// })
 
 // Задание 4
-const productsInformation = productsCard.reduce((accumulator, product) => {
-  accumulator.push({ [product.name]: product.description });
+
+const productInformation = productCards.reduce((accumulator, product) => {
+    accumulator.push({ [product.name]: product.description });
   return accumulator;
 }, []);
 
-console.log(productsInformation);
+console.log(productInformation);
 
 
 // Задание 5
 
-const getNumCardsFromUser = () => {
-  let count;
-  while (true) {
-    const inputPrompt = prompt("Сколько карточек отобразить? От 1 до 5");
-    if (inputPrompt === null) {
-      alert("Вы отменили ввод. Будет отображено 0 карточек.");
-      return 0;
-    }
-    count = parseInt(inputPrompt);
+function renderProductCards(productCards) {
+  productCards.forEach(product => {
+    const productCardsClone = productTemplate.content.cloneNode(true);
 
-    if (!isNaN(count) && count >= 1 && count <= 5) {
-      return count;
-    } else {
-      alert("Некорректный ввод. Пожалуйста, введите число от 1 до 5.");
-    }
-  }
-};
+    productCardsClone.querySelector('.product-img').src = `Имя: ${product.img}`;
+    productCardsClone.querySelector('.product-category').textContent = `Категория: ${product.category}`;
+    productCardsClone.querySelector('.product-name').textContent = `Имя: ${product.name}`;
+    productCardsClone.querySelector('.product-description').textContent = `Описание: ${product.description}`;
+    productCardsClone.querySelector('.product-compound').textContent = `Состав: ${product.compound}`;
+    productCardsClone.querySelector('.product-price').textContent = `Цена: ${product.price}`;
 
-const renderProductCards = (productsData, numToRender) => {
-  const listContainer = document.querySelector('#product-cards-list');
-  const cardTemplate = document.querySelector('#product-template');
-
-  if (!listContainer || !cardTemplate || numToRender <= 0 || !productsData || productsData.length === 0) {
-    return;
-  }
-
-  listContainer.innerHTML = ''; 
-
-  productsData.slice(0, numToRender).forEach(product => {
-    const cardClone = cardTemplate.content.cloneNode(true);
-
-   
-    const categoryElement = cardClone.querySelector('.product-category');
-    if (categoryElement) categoryElement.textContent = product.category || 'Без категории';
-
-    const nameElement = cardClone.querySelector('.product-name');
-    if (nameElement) nameElement.textContent = `Имя: ${product.name || 'Название не указано'}`;
-
-    const descriptionElement = cardClone.querySelector('.product-description');
-    if (descriptionElement) descriptionElement.textContent = `Описание: ${product.description || 'Нет описания'}`;
-
-    const compoundElement = cardClone.querySelector('.product-compound');
-    if (compoundElement) compoundElement.textContent = `Состав: ${product.compound || 'Состав не указан'}`;
-
-    const priceElement = cardClone.querySelector('.product-price');
-    if (priceElement) priceElement.innerHTML = `${product.price ? product.price : 'Цена не указана'} &#8381;`;
-
-   
-    listContainer.appendChild(cardClone);
+    productList.appendChild(productCardsClone);
   });
-};
+  console.log(productList);
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-  const cardsCount = getNumCardsFromUser(); 
-  renderProductCards(productsCard, cardsCount); 
-});
+
+const getNumberCards = () => {
+   const inputPrompt = prompt("Сколько карточек отобразить? От 1 до 5")
+    if (inputPrompt === null) {
+            alert("Вы отменили ввод. Будет отображено 0 карточек.");
+            return 0;
+    }
+
+  const countCards = parseInt(inputPrompt)
+    if (!isNaN(countCards) && countCards >= 1 && countCards <= 5) {
+            return countCards; 
+        } else {
+            alert("Некорректный ввод. Пожалуйста, введите число от 1 до 5.");
+        }
+      
+      const numberCards = productCards.slice(0, countCards);
+
+     renderProductCards(numberCards);
+}
+getNumberCards()
+
+
+
+
+
+
+
+
+
+
+
