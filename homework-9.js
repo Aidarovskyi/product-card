@@ -51,7 +51,6 @@ overlay.addEventListener('click', (event) => {
 
 // Задание 6
 
-
 const modal = document.getElementById("myModal");
 const overlay = document.getElementById("overlay");
 const btn = document.getElementById("openModal");
