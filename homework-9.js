@@ -52,7 +52,7 @@ overlay.addEventListener('click', (event) => {
 // Задание 6
 
 const modal = document.getElementById("myModal");
-const overlay = document.getElementById("overlay");
+const overlay1 = document.getElementById("overlay1");
 const btn = document.getElementById("openModal");
 const span = document.getElementsByClassName("close")[0];
 const form = document.getElementById("registrationForm");
@@ -66,7 +66,7 @@ function openModal() {
 
 function closeModal() {
   modal.classList.remove("modal-showed");
-  overlay.classList.remove("overlay-showed");
+  overlay1.classList.remove("overlay-showed");
   form.reset(); 
   errorMessage.textContent = ""; 
   form.classList.remove("was-validated"); 
@@ -76,7 +76,7 @@ btn.onclick = openModal;
 
 span.onclick = closeModal;
 
-overlay.onclick = closeModal;
+overlay1.onclick = closeModal;
 
 form.addEventListener("submit", function (event) {
   event.preventDefault(); 
